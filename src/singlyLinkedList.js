@@ -5,4 +5,6 @@ class Node {
   }
 }
 
-console.log("Node");
+console.log("Hello");
+
+// Insertion

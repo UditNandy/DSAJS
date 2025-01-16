@@ -4,6 +4,7 @@
   "description": "DSA with Js",
   "main": "singlyLinkedList.js",
   "scripts": {
+    "singlyLinkedList": "nodemon ./src/singlyLinkedList.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
