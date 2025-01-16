@@ -1,0 +1,22 @@
+{
+  "name": "dsajs",
+  "version": "1.0.0",
+  "description": "DSA with Js",
+  "main": "singlyLinkedList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UditNandy/DSAJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UditNandy/DSAJS/issues"
+  },
+  "homepage": "https://github.com/UditNandy/DSAJS#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
