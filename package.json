@@ -5,6 +5,7 @@
   "main": "singlyLinkedList.js",
   "scripts": {
     "singlyLinkedList": "nodemon ./src/singlyLinkedList.js",
+    "array": "nodemon ./src/array.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

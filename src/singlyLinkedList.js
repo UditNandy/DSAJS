@@ -5,6 +5,11 @@ class Node {
   }
 }
 
+/* 
+Trutoise and Hare algorithm
+1.Used to detect a loop in the linked list
+*/
+
 const arrayToLlUsingLoop = (arr) => {
   let head = new Node(arr[0]);
   let curr = head;
