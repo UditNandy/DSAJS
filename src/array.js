@@ -8,6 +8,21 @@ const largestElement = (arr) => {
 };
 
 // Second Largest Element
+const secondLargest = (arr) => {
+  let max = arr[0];
+  let secondMax = -1;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      secondMax = max;
+      max = arr[i];
+    } else if (arr[i] > secondMax && arr[i] < max) {
+      secondMax = arr[i];
+    }
+  }
+
+  console.log(secondMax);
+};
 
 // Check if an array is sorted
 const isSorted = (arr) => {
@@ -109,7 +124,6 @@ var singleNumber = function (arr) {
 };
 
 // Union of 2 array
-
 const union = function (arr1, arr2) {
   let i = 0;
   let j = 0;
@@ -180,4 +194,63 @@ const nextPermutation = function (arr) {
   console.log(arr);
 };
 
-nextPermutation([1, 1, 5]);
+// Stock buy and sell problem
+const stockBuyAndSell = (arr) => {
+  const n = arr.length;
+  let max = 0;
+  let curr = arr[n - 1];
+
+  for (let i = n - 2; i >= 0; i--) {
+    if (arr[i] > curr) curr = arr[i];
+    else max = Math.max(max, curr - arr[i]);
+  }
+  console.log(max);
+};
+
+// Alternate +ve and -ve numbers
+const alternatePositiveAndNegetive = (arr) => {
+  const n = arr.length;
+  const res = new Array(n).fill(0);
+  let posIdx = 0;
+  let negIdx = 1;
+
+  for (let i = 0; i < n; i++) {
+    if (arr[i] >= 0) {
+      res[posIdx] = arr[i];
+      posIdx += 2;
+    } else {
+      res[negIdx] = arr[i];
+      negIdx += 2;
+    }
+  }
+
+  console.log(res);
+};
+
+/* Rotate a matrix by 90 deg
+    1.Find the transpose of the matrix
+    2.Rotate each row of the matrix
+*/
+const rotateMatrix = (arr) => {
+  let n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++)
+      [arr[i][j], arr[j][i]] = [arr[j][i], arr[i][j]];
+  }
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n / 2; j++) {
+      [arr[i][j], arr[i][n - j - 1]] = [arr[i][n - j - 1], arr[i][j]];
+    }
+  }
+
+  console.log(arr);
+};
+
+rotateMatrix([
+  [5, 1, 9, 11],
+  [2, 4, 8, 10],
+  [13, 3, 6, 7],
+  [15, 14, 12, 16],
+]);
